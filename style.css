@@ -1,0 +1,271 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Global Reset and Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle-label {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Interactive Section */
+.interactive {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.interactive h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.interactive h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin: 20px 0 10px;
+}
+
+.interactive p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Event Controls */
+.event-controls {
+    margin: 20px 0;
+}
+
+.event-controls button, .gallery button {
+    background-color: #3498db;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.event-controls button:hover, .gallery button:hover {
+    background-color: #2980b9;
+}
+
+.event-controls input {
+    padding: 8px;
+    font-size: 1rem;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Image Gallery */
+.gallery {
+    margin: 20px 0;
+}
+
+#gallery-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Accordion */
+.accordion {
+    margin: 20px 0;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    background-color: #3498db;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #2980b9;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 0 0 5px 5px;
+}
+
+.accordion-content.active {
+    display: block;
+}
+
+/* Form */
+.form-container {
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #c0392b;
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle-label {
+        display: block;
+        align-self: flex-end;
+    }
+
+    .interactive h1 {
+        font-size: 1.8rem;
+    }
+
+    .interactive p {
+        font-size: 1rem;
+    }
+
+    .event-controls button, .gallery button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .interactive h1 {
+        font-size: 2rem;
+    }
+}
